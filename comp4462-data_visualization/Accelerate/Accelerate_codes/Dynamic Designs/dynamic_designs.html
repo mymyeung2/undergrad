@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif, fantasy, cursive, Verdana;
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    nav {
+      width: 30%;
+      background-color: #222222;
+      height: 2000px;
+      font-size: 9px;
+      font-family: Verdana;
+      color: white;
+      position: fixed;
+      padding-top: 5px;
+      padding-left: 5px;
+      margin-left: 0px;
+    }
+
+    article {
+      width: 75;
+      height: 610px;
+      margin-left: 30.7%;
+      margin-bottom: 0px;
+      content: "";
+      display: table;
+      clear: both;
+      position: fixed;
+      background-color: #E0E0E0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: auto 100%;
+      color: white;
+      font-size: 18px;
+      font-family: Verdana;
+      padding-left: 35px;
+      color: black;
+    }
+
+    h2{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  </style>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://www.koolchart.com/demo/LicenseKey/KoolChartLicense.js"></script>
+  <script src="https://www.koolchart.com/demo/KoolChart/JS/KoolChart.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <script language="JavaScript" src="js/moment.min.js"></script>
+  <script src="js/lodash.js"></script>
+  <link rel="stylesheet" href="https://www.koolchart.com/demo/KoolChart/Assets/Css/KoolChart.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
+</head>
+<body>
+  <nav>
+    <div><input id="button" type="button" value="generate" onclick="generate_all()" /></div><br>
+    <div style="background-color:red;">
+      <h2>BUBBLE</h2>
+      <div>
+          <label>Cab Type:</label>
+          <label><input type="checkbox" id="financial_district_source" onchange="Black_true=!Black_true">Black</label>
+          <label><input type="checkbox" id="financial_district_source" onchange="BlackSUV_true=!BlackSUV_true">Black SUV</label>
+          <label><input type="checkbox" id="financial_district_source" onchange="Uberpool_true=!Uberpool_true">UberPool</label>
+          <label><input type="checkbox" id="financial_district_source" onchange="UberX_true=!UberX_true">UberX</label>
+          <label><input type="checkbox" id="financial_district_source" onchange="UberXL_true=!UberXL_true">UberXL</label>
+          <label><input type="checkbox" id="financial_district_source" onchange="WAV_true=!WAV_true">WAV</label>
+      </div>
+
+
+      <div>
+        <label>Time Range:</label>
+        <label for="quantity">Min hour (between 0 and 24):</label><input type="number" id="quantity" onchange="mintime=document.getElementById('quantity').value " name="quantity" min="0" max="24">
+        <label for="quantity1">Max hour (between 0 and 24):</label><input type="number" id="quantity1" onchange="maxtime=document.getElementById('quantity1').value " name="quantity1" min="0" max="24">
+      </div>
+
+      <div>
+        <label>Weekday Range:</label>
+        <label for="quantity3">Min Weekday (between 1 and 7):</label><input type="number" id="quantity3" onchange="minday=document.getElementById('quantity3').value " name="quantity3" min="1" max="7">
+        <label for="quantity4">Max Weekday (between 1 and 7):</label><input type="number" id="quantity4" onchange="maxday=document.getElementById('quantity4').value " name="quantity4" min="1" max="7">
+      </div>
+
+      <div>
+        <label>Price Range:</label>
+        <label for="quantity5">Min Price (between 4.5 and 89.5):</label><input type="number" id="quantity5" onchange="minprice=document.getElementById('quantity5').value " name="quantity5" min="4.5" max="89.5">
+        <label for="quantity6">Max Price (between 4.5 and 89.5):</label><input type="number" id="quantity6" onchange="maxprice=document.getElementById('quantity6').value " name="quantity6" min="4.5" max="89.5">
+      </div>
+    </div>
+    <div  style="background-color: blue;">
+      <h2>BUMP</h2>
+      X-AXIS
+      <input type="radio" id="week" name="bump_x" value="week" onchange="set_x(this.value)">
+      <label for="male">Week</label>
+      <input type="radio" id="dates" name="bump_x" value="date" onchange="set_x(this.value)">
+      <label for="female">Date</label>
+      <input type="radio" id="hours" name="bump_x" value="hour" onchange="set_x(this.value)">
+      <label for="other">Hour</label><br>
+      Y-AXIS
+        <input type="radio" id="week" name="bump_y" value="source" onchange="set_y(this.value)">
+        <label for="male">Pick-up</label>
+        <input type="radio" id="dates" name="bump_y" value="dest" onchange="set_y(this.value)">
+        <label for="female">Destination</label>
+        <input type="radio" id="hours" name="bump_y" value="comb" onchange="set_y(this.value)">
+        <label for="other">Pick-up & Destination</label>
+        <input type="radio" id="hours" name="bump_y" value="uber" onchange="set_y(this.value)">
+        <label for="other">UBER</label>
+        <input type="radio" id="hours" name="bump_y" value="lyft" onchange="set_y(this.value)">
+        <label for="other">LYFT</label><br>
+      </div>
+
+      <div class="row">
+            <div class="column" style="background-color:brown;">
+              <h2>Stream Source:</h2>
+              <label><input type="checkbox" id="financial_district_source" onchange="filter_source(this)">Financial District</label>
+              <label><input type="checkbox" id="North_end_source" onchange="filter_source(this)">North End</label>
+              <label><input type="checkbox" id="North_station_source" onchange="filter_source(this)">North Station</label>
+              <label><input type="checkbox" id="Haymarket_square_source" onchange="filter_source(this)">Haymarket Square</label>
+              <label><input type="checkbox" id="Back_bay_source" onchange="filter_source(this)">Back Bay</label>
+              <label><input type="checkbox" id="Beacon_hill_source" onchange="filter_source(this)">Beacon Hill</label>
+              <label><input type="checkbox" id="Boston_university_source" onchange="filter_source(this)">Boston University</label>
+              <label><input type="checkbox" id="Fenway_source" onchange="filter_source(this)">Fenway</label>
+              <label><input type="checkbox" id="South_station_source" onchange="filter_source(this)">South Station</label>
+              <label><input type="checkbox" id="Theatre_district_source" onchange="filter_source(this)">Theatre District</label>
+              <label><input type="checkbox" id="West_end_source" onchange="filter_source(this)">West End</label>
+              <label><input type="checkbox" id="Northeastern_university_source" onchange="filter_source(this)">Northeastern University</label><br>
+          </div>
+
+          <div class="column" style="background-color:orange;">
+              <h2>Stream Destination:</h2>
+              <label><input type="checkbox" id="financial_district_dest" onchange="filter_dest(this)">Financial District</label>
+              <label><input type="checkbox" id="North_end_dest" onchange="filter_dest(this)">North End</label>
+              <label><input type="checkbox" id="North_station_dest" onchange="filter_dest(this)">North Station</label>
+              <label><input type="checkbox" id="Haymarket_square_dest" onchange="filter_dest(this)">Haymarket Square</label>
+              <label><input type="checkbox" id="Back_bay_dest" onchange="filter_dest(this)">Back Bay</label>
+              <label><input type="checkbox" id="Beacon_hill_dest" onchange="filter_dest(this)">Beacon Hill</label>
+              <label><input type="checkbox" id="Boston_university_dest" onchange="filter_dest(this)">Boston University</label>
+              <label><input type="checkbox" id="Fenway_dest" onchange="filter_dest(this)">Fenway</label>
+              <label><input type="checkbox" id="South_station_dest" onchange="filter_dest(this)">South Station</label>
+              <label><input type="checkbox" id="Theatre_district_dest" onchange="filter_dest(this)">Theatre District</label>
+              <label><input type="checkbox" id="West_end_dest" onchange="filter_dest(this)">West End</label>
+              <label><input type="checkbox" id="Northeastern_university_dest" onchange="filter_dest(this)">Northeastern University</label><br>
+          </div>
+          <div class="row">
+              <div class = "column2" style = "background-color: lightblue;" height = 500px>
+                  <div id="time-range">
+                      <p><h2>Stream Time Range:</h2> <span class="slider-time"></span> - <span class="slider-time2"></span>
+                      </p>
+
+                      <div class="sliders_step1">
+                          <div id="slider-range"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class = "column2" style = "background-color: green;" height = 300px>
+            <h2>Stream x-axis</h2> <br>
+            <input type="radio" name="x-axis" id="date" value="date">
+            <label for="date">Date</label>
+            <input type="radio" name="x-axis" id="weekday" value="weekday">
+            <label for="weekday">Weekday</label>
+            <input type="radio" name="x-axis" id="hour" value="hour">
+            <label for="hour">Hour</label>
+          </div>
+          <div>
+            <label><input type="checkbox" id="Uber" onchange="change_cab_type(this)">Uber</label>
+            <label><input type="checkbox" id="Lyft" onchange="change_cab_type(this)">Lyft</label>
+          </div>
+      </div>
+  </nav>
+  <article>
+    <table style="width:99%">
+      <col style="width:40%">
+      <col style="width:60%">
+      <tr>
+        <td>
+          <div id="myDiv" style="width:350px; height:310px;"></div>
+        </td>
+        <td>
+          <div id="my_dataviz" style="width:460px; height:310px;"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+            <div id="chartHolder" style="width:810px; height:275px;"></div>
+        </td>
+      </tr>
+    </table>
+    <script language="JavaScript" src="js/stream.js"></script>
+    <script language="JavaScript" src="js/bubble.js"></script>
+    <script language="JavaScript" src="js/bump.js"></script>
+    <script language="JavaScript" src="js/all.js"></script>
+    </article>
+  </body>
+</html>

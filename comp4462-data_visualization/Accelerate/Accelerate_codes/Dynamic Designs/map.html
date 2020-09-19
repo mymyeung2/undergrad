@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Uber Map</title>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif, fantasy, cursive, Verdana;
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    header {
+      background-color: #333333;
+      padding: 20px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+      font-family: Helvetica;
+    }
+
+    section {
+      display: -webkit-flex;
+      display: flex;
+      position: fixed;
+    }
+
+    nav {
+      width: 36%;
+      background-color: #222222;
+      height: 2000px;
+      font-size: 70px;
+      font-family: Verdana;
+      color: white;
+      position: fixed;
+      padding-top: 30px;
+      padding-left: 13px;
+      margin-left: 0px;
+    }
+
+    article {
+      width: 63.9%;
+      height: 2000px;
+      margin-left: 36.7%;
+      margin-bottom: 0px;
+      content: "";
+      display: table;
+      clear: both;
+      position: relative;
+      background-color: #E0E0E0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: auto 100%;
+      color: white;
+      font-size: 18px;
+      font-family: Verdana;
+      padding-left: 35px;
+      color: black;
+    }
+
+    a { text-decoration: none; color:white }
+    a:visited { text-decoration: none; color:white; }
+    a:hover { text-decoration: none; color:white; }
+    a:focus { text-decoration: none; color:white; }
+    a:hover, a:active { text-decoration: none; color:white }
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 35px;
+    }
+
+    largetopic{
+      font-size: 45px;
+      font-family: Tw Cen MT;
+    }
+
+  </style>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+  <script src="https://www.koolchart.com/demo/LicenseKey/KoolChartLicense.js"></script>
+  <script src="https://www.koolchart.com/demo/KoolChart/JS/KoolChart.js"></script>
+  <link rel="stylesheet" href="https://www.koolchart.com/demo/KoolChart/Assets/Css/KoolChart.css"/>
+</head>
+<body>
+  <nav>
+    <b>
+      <a href="about.html"><font size=6 color=#F96F00>Accelerate<br/></font></a>
+      <hr width=75% align=left size=4px color=#F96F00>
+      <a href="about.html"><font size=5 color="white">COMP4462 Project<br>2020 Spring</font></a>
+
+    </b>
+  </nav>
+  <article>
+      <br>
+      <largetopic>Uber Map</largetopic><br>
+      <canvas id="myCanvas" width="400" height="400" style="border:3px solid #000000;"></canvas>
+      <script type="text/javascript" src="js/map.js"></script>
+      <br>
+      <button onclick="show_all()">SHOW ALL DESTINATIONS</button><br>
+      <button onclick="show_one(0)">Back Bay</button>
+      <button onclick="show_one(1)">Beacon Hill</button>
+      <button onclick="show_one(2)">Boston University</button>
+      <button onclick="show_one(3)">Fenway</button>
+      <button onclick="show_one(4)">Financial District</button>
+      <button onclick="show_one(5)">Haymarket Square</button>
+      <button onclick="show_one(6)">North End</button>
+      <button onclick="show_one(7)">North Station</button>
+      <button onclick="show_one(8)">Northeastern University</button>
+      <button onclick="show_one(9)">South Station</button>
+      <button onclick="show_one(10)">Theatre District</button>
+      <button onclick="show_one(11)">West End</button>
+
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+      <div id="chartHolder" style="width:660px; height:400px;"></div>
+    X-AXIS
+  </article>
+</body>
+</html>
