@@ -4,7 +4,7 @@ This repo includes some files related to Michael Yeung's undergraduate study (MA
 
 # Folders
 ## COMP 4331 Data Mining
-Supervised and Unsupervised Learning, using Bayes, ID3, C4.5, K-means Clustering, DBScan, etc.
+Supervised and Unsupervised Learning (ML), using Bayes, ID3, C4.5, K-means Clustering, DBScan, etc.
 
 ## COMP 4462 Data Visualization
 Data Visualization Group Project (mainly in JavaScript and Python). It includes 4 dynamic designs (html, CSS, JavaScript) and 3 static designs (Python: using matplotlib and numpy).
