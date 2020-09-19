@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 0 0;
+  font-family: Verdana;
+  position: flex;
+}
+
+/* genereal area on the right */
+.gen-area {
+  width: 100vw;
+  height: max(auto, 100vh);
+  margin-top: 18vh;
+  background-color: #E0E0E0;
+  font-size: 18px;
+  font-family: Verdana;
+  padding: 8vw 8vw 8vw;
+  margin-right: 0;
+  color: black;
+  float: left;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.gen-header h1{
+  font-size: 5.5vw;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.gen-header h2{
+  font-size: 5vw;
+  font-weight: normal;
+  color: grey;
+}
+
+.gen-header h3{
+  font-size: 3.7vw;
+  font-weight: normal;
+  color: grey;
+}
+
+.gen-table{
+  font-size: 4.5vw;
+  font-weight: normal;
+}
+
+@media only screen and (orientation: landscape) {
+  .gen-area{
+    width: 67.5vw;
+    height: max(auto, 100vh);
+    margin-top: 0;
+    margin-left: 32.5vw;
+    padding-top: 3vw;
+    padding-left: 5vw;
+    padding-right: 3vw;
+    z-index: 3;
+  }
+
+  .gen-header h1{
+    font-size: 3vw;
+  }
+
+  .gen-header h2{
+    font-size: 2.5vw;
+  }
+
+  .gen-header h3{
+    font-size: 1.6vw;
+  }
+
+  .gen-table{
+    font-size: 1.3vw;
+    font-weight: normal;
+  }
+
+  .gen-table td{
+    padding: 0.03vw 1vw 0.03vw;
+  }
+}

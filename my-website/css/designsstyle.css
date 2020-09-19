@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: Verdana;
+  position: flex;
+}
+
+/* genereal area on the right */
+.gen-area {
+  width: 100vw;
+  height: max(auto, 100vh);
+  margin-top: 20vh;
+  background-color: #E0E0E0;
+  font-size: 18px;
+  font-family: Verdana;
+  padding: 8vw 8vw 8vw;;
+  color: black;
+  float: left;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.gen-header h1{
+  font-size: 7vw;
+  font-weight: bold;
+}
+
+.gen-header h2{
+  font-size: 4.5vw;
+  font-style: italic;
+  font-weight: normal;
+  color: grey;
+}
+
+.portals-container{
+  position: flex;
+  flex-direction: row;
+  width: 70vw;
+}
+
+.portals-container h7{
+  font-style: normal;
+  color: black;
+}
+
+.portals-head{
+  float: left;
+  width: 25vw;
+}
+
+.portals-item{
+  float: left;
+  width: 55vw;
+}
+
+.gen-section{
+  margin-top: 3vh;
+}
+
+.gen-section h3{
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.gen-section-item{
+  margin-top: 2vw;
+}
+
+.gen-section-item h4{
+  font-size: 6vw;
+  font-weight: normal;
+}
+
+.gen-section-item h5{
+  font-size: 4.5vw;
+  font-style: italic;
+  font-weight: normal;
+  color: grey;
+}
+
+.gen-section-item h6{
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+}
+
+.gen-section-item img{
+  width: 83vw;
+  height: auto;
+}
+
+.reduced-size-img img{
+  width: 40vw;
+  height: auto;
+  margin-right: 1vw;
+}
+
+#myCanvas{
+  width: 70vw;
+  height: 70vw;
+}
+
+button{
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+@media only screen and (orientation: landscape) {
+  .gen-area{
+    width: 67.5vw;
+    height: max(auto, 100vh);
+    margin-top: 0;
+    margin-left: 32.5vw;
+    padding-top: 3vw;
+    padding-left: 5vw;
+    padding-right: 3vw;
+    z-index: 3;
+  }
+
+  .gen-header h1{
+    font-size: 3vw;
+  }
+
+  .gen-header h2{
+    font-size: 2vw;
+  }
+
+  .portals-container{
+    position: flex;
+    flex-direction: row;
+    width: 50vw;
+  }
+
+  .portals-head{
+    float: left;
+    width: 10vw;
+  }
+
+  .portals-item{
+    float: left;
+    width: 40vw;
+  }
+
+  .gen-section{
+    margin-top: 1.5vw;
+  }
+
+  .gen-section h3{
+    font-size: 2.5vw;
+  }
+
+  .gen-section-item{
+      margin-top: 1vw;
+  }
+
+  .gen-section-item h4{
+    font-size: 2vw;
+  }
+
+  .gen-section-item h5{
+    font-size: 1.5vw;
+  }
+
+  .gen-section-item h6{
+    font-size: 1.5vw;
+  }
+
+  .gen-section-item img{
+    width: 27vw;
+  }
+
+  .reduced-size-img img{
+    width: 20vw;
+    margin: 0;
+  }
+
+  #myCanvas{
+    width: 25vw;
+    height: 25vw;
+  }
+
+  button{
+    font-size: 1.2vw;
+    font-weight: normal;
+  }
+}

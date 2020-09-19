@@ -1,0 +1,100 @@
+/* navigation bar on the left; on top if vert */
+.leftbar{
+  width: 100vw;
+  background-color: #222222;
+  height: 20vh;
+  padding-left: 12vw;
+  padding-right: 0vw;
+  padding-top: min(3.2vh,5vw);
+  font-family: Verdana;
+  display: flex;
+  position: fixed;
+  float: left;
+  z-index: 2;
+}
+
+/* navigation bar: text located top */
+.leftbar-top{
+  width: 70vw;
+  font-size: min(5vw, 3vh);
+  float: left;
+}
+
+/* navigation bar: text located middle */
+.leftbar-item{
+  width: 42vw;
+  font-size: min(6vw, 3vh);
+  float: left;
+}
+
+/* navigation bar: text located bottom */
+.leftbar-bottom{
+  margin: 3vh 0 0;
+  font-size: 1.5vw;
+  float: left;
+  display: none;
+}
+
+.leftbar-bottom-block{
+  width: 14vw;
+}
+
+oc:hover {
+  color: #F96F00;
+}
+
+/* navigation bar: text located top */
+lt{
+  color: #F96F00;
+}
+
+/* navigation bar: text located bottom */
+smalloc{
+  color: grey;
+}
+
+smalloc:hover {
+  color: #F96F00;
+}
+
+a { text-decoration: none; color:white }
+
+/* navigation bar: horizontal line */
+hr {
+  margin-top:2vw;
+  margin-bottom: 3vw;
+}
+
+@media only screen and (orientation: landscape) {
+  .leftbar{
+    width: 32vw;
+    height: 100vh;
+    padding: 5vh 1.5vw 5vh;
+    float: left;
+  }
+
+  /* navigation bar: text located top */
+  .leftbar-top{
+    width: 29vw;
+    font-size: 2.5vw;
+  }
+
+  /* navigation bar: text located middle */
+  .leftbar-item{
+    font-size: 4.7vw;
+    width: 29vw;
+  }
+
+  /* navigation bar: text located bottom */
+  .leftbar-bottom{
+    margin: 3vh 0 0;
+    font-size: 1.5vw;
+    float: left;
+    display: flex;
+  }
+
+  .leftbar-bottom-block{
+    width: 14vw;
+  }
+
+}

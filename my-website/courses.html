@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Michael Yeung: Courses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/leftbar.css">
+  <link rel="stylesheet" href="css/coursesstyle.css">
+  <style>
+  /* temporarily placing here: Firefox Bug*/
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0 0;
+    font-family: Verdana;
+    position: flex;
+  }
+
+  /* genereal area on the right */
+  .gen-area {
+    width: 100vw;
+    height: max(auto, 100vh);
+    margin-top: 18vh;
+    background-color: #E0E0E0;
+    font-size: 18px;
+    font-family: Verdana;
+    padding: 8vw 8vw 8vw;
+    margin-right: 0;
+    color: black;
+    float: left;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .gen-header h1{
+    font-size: 5.5vw;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .gen-header h2{
+    font-size: 5vw;
+    font-weight: normal;
+    color: grey;
+  }
+
+  .gen-header h3{
+    font-size: 3.7vw;
+    font-weight: normal;
+    color: grey;
+  }
+
+  .gen-table{
+    font-size: 4.5vw;
+    font-weight: normal;
+  }
+
+  @media only screen and (orientation: landscape) {
+    .gen-area{
+      width: 67.5vw;
+      height: max(auto, 100vh);
+      margin-top: 0;
+      margin-left: 32.5vw;
+      padding-top: 3vw;
+      padding-left: 5vw;
+      padding-right: 3vw;
+      z-index: 3;
+    }
+
+    .gen-header h1{
+      font-size: 3vw;
+    }
+
+    .gen-header h2{
+      font-size: 2.5vw;
+    }
+
+    .gen-header h3{
+      font-size: 1.6vw;
+    }
+
+    .gen-table{
+      font-size: 1.3vw;
+      font-weight: normal;
+    }
+
+    .gen-table td{
+      padding: 0.03vw 1vw 0.03vw;
+    }
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0 0;
+    font-family: Verdana;
+    position: flex;
+  }
+
+  /* genereal area on the right */
+  .gen-area {
+    width: 100vw;
+    height: max(auto, 100vh);
+    margin-top: 18vh;
+    background-color: #E0E0E0;
+    font-size: 18px;
+    font-family: Verdana;
+    padding: 8vw 8vw 8vw;
+    margin-right: 0;
+    color: black;
+    float: left;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .gen-header h1{
+    font-size: 5.5vw;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .gen-header h2{
+    font-size: 5vw;
+    font-weight: normal;
+    color: grey;
+  }
+
+  .gen-header h3{
+    font-size: 3.7vw;
+    font-weight: normal;
+    color: grey;
+  }
+
+  .gen-table{
+    font-size: 4.5vw;
+    font-weight: normal;
+  }
+
+  @media only screen and (orientation: landscape) {
+    .gen-area{
+      width: 67.5vw;
+      height: max(auto, 100vh);
+      margin-top: 0;
+      margin-left: 32.5vw;
+      padding-top: 3vw;
+      padding-left: 5vw;
+      padding-right: 3vw;
+      z-index: 3;
+    }
+
+    .gen-header h1{
+      font-size: 3vw;
+    }
+
+    .gen-header h2{
+      font-size: 2.5vw;
+    }
+
+    .gen-header h3{
+      font-size: 1.6vw;
+    }
+
+    .gen-table{
+      font-size: 1.3vw;
+      font-weight: normal;
+    }
+
+    .gen-table td{
+      padding: 0.03vw 1vw 0.03vw;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <div class="leftbar">
+    <b>
+      <div class="leftbar-top">
+        <a href="index.html">
+          <lt>MICHAEL YEUNG</lt>
+        </a>
+        <hr width=75% align=left size=2vw color=#F96F00>
+      </div>
+
+      <div class="leftbar-item">
+        <a href="index.html"><oc>
+          ABOUT
+        </oc></a>
+      </div>
+
+      <div class="leftbar-item">
+        <a href="portfolio.html"><oc>
+          DESIGNS</oc></a>
+      </div>
+
+      <div class="leftbar-item">
+        <a href="courses.html"><oc>
+          COURSES</oc><font color=#F96F00><</font></a>
+      </div>
+
+      <div class="leftbar-item">
+        <a href="games.html"><oc>
+          GAMES</oc></a>
+      </div>
+
+      <div class="leftbar-bottom">
+
+        <div class="leftbar-bottom-block">
+          <a href="whiteboard.html"><smalloc>
+            WHITEBOARD
+          </smalloc></a>
+        </div>
+
+        <div class="leftbar-bottom-block">
+          <a href="links.html"><smalloc>
+            LINKS
+          </smalloc></a>
+        </div>
+      </div>
+    </b>
+  </div>
+  <div class="gen-area">
+    <div class="gen-header">
+      <h1 style="font-face: Verdana; font-style: normal; font-weight: bold;">
+        MY <font color=#F96F00>UNDERGRADUATE</font> STUDY</h1>
+      <h2>BSc in Mathematics and Economics</h2>
+      <h3>with Minors in Big Data Technology & Actuarial Mathematics</h3>
+    </div>
+    <div class="gen-table">
+      <table width=96% border=1>
+        <col width=26%>
+        <col width=22%>
+        <col width=52%>
+        <tr>
+          <td><b>Semester:</b></td>
+          <td colspan=2><b>Courses:</b></td>
+        </tr>
+        <tr>
+          <td rowspan=5>Year-1 Fall</td>
+          <td>ACCT 2010</td>
+          <td>Principles of Accounting I</td>
+        </tr>
+        <tr>
+          <td>ELEC 1100</td>
+          <td>Intro. to Electro-Robot Design</td>
+        </tr>
+        <tr>
+          <td>FINA 2203</td>
+          <td>Fundamentals of Bus. Finance</td>
+        </tr>
+        <tr>
+          <td>MATH 1023</td>
+          <td>Honors Calculus I</td>
+        </tr>
+        <tr>
+          <td>PHYS 1112</td>
+          <td>General Physics I with Calculus</td>
+        </tr>
+        <tr>
+          <td rowspan="6">Year-1 Spring</td>
+          <td>CHEM 1020</td>
+          <td>General Chemistry IB</td>
+        </tr>
+        <tr>
+          <td>COMP 2011</td>
+          <td>Programming with C++</td>
+        </tr>
+        <tr>
+          <td>COMP 2711</td>
+          <td>Discrete Math. Tools for C.S.</td>
+        </tr>
+        <tr>
+          <td>ECON 2103</td>
+          <td>Principles of Microeconomics</td>
+        </tr>
+        <tr>
+          <td>MATH 1024</td>
+          <td>Honors Calculus II</td>
+        </tr>
+        <tr>
+          <td>PHYS 1003</td>
+          <td>Energy and Related Env. Issues</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Year-1 Summer</td>
+          <td>COMP 1029P</td>
+          <td>Python Prog. Bridging Course</td>
+        </tr>
+        <tr>
+          <td>MATH 2411</td>
+          <td>Applied Statistics</td>
+        </tr>
+        <tr>
+          <td rowspan="5">Year-2 Fall</td>
+          <td>ECON 3123</td>
+          <td>Macroeconomic Theory I</td>
+        </tr>
+        <tr>
+          <td>LIFS 1010</td>
+          <td>Appreciation of Biological Sci.</td>
+        </tr>
+        <tr>
+          <td>MATH 2023</td>
+          <td>Multivariable Calculus</td>
+        </tr>
+        <tr>
+          <td>MATH 2121</td>
+          <td>Linear Algebra</td>
+        </tr>
+        <tr>
+          <td>SOSC 1150</td>
+          <td>Science, Technology and Work</td>
+        </tr>
+        <tr>
+          <td rowspan="3">Year-2 Winter</td>
+          <td>COMP 1029J</td>
+          <td>Java Prog. Bridging Course</td>
+        </tr>
+        <tr>
+          <td>COMP 1029V</td>
+          <td>Excel VBA Prog. Bridging Course</td>
+        </tr>
+        <tr>
+          <td>ISOM 1700</td>
+          <td>Critical Issues in Bus. Operations</td>
+        </tr>
+        <tr>
+          <td rowspan="6">Year-2 Spring</td>
+          <td>COMP 4331</td>
+          <td>Data Mining</td>
+        </tr>
+        <tr>
+          <td>COMP 4462</td>
+          <td>Data Visualization</td>
+        </tr>
+        <tr>
+          <td>ECON 3113</td>
+          <td>Microeconomic Theory I</td>
+        </tr>
+        <tr>
+          <td>IEDA 2200</td>
+          <td>Engineering Management</td>
+        </tr>
+        <tr>
+          <td>LABU 2040</td>
+          <td>Buiness Case Analyses</td>
+        </tr>
+        <tr>
+          <td>MATH 2033</td>
+          <td>Mathematical Analysis</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Year-2 Summer</td>
+          <td>ISOM 1380</td>
+          <td>Tech. and Innovation: Social and Bus. Perspectives</td>
+        </tr>
+        <tr>
+          <td colspan="2">French I (HKUST Center for Language Education)</td>
+        </tr>
+        <tr>
+          <td rowspan="6">Year-3 Fall<br>(Provisional)</td>
+          <td>ECON 3133</td>
+          <td>Microeconomic Theory II</td>
+        </tr>
+        <tr>
+          <td>ECON 3143</td>
+          <td>Macroeconomic Theory II</td>
+        </tr>
+        <tr>
+          <td>MATH 2421</td>
+          <td>Probability</td>
+        </tr>
+        <tr>
+          <td>MATH 2511</td>
+          <td>Fundamentals of Actuarial Mathematics</td>
+        </tr>
+        <tr>
+          <td>MATH 3033</td>
+          <td>Real Analysis</td>
+        </tr>
+        <tr>
+          <td colspan="2">Japanese I (HKUST Center for Language Education)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
