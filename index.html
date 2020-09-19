@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Michael Yeung's Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/leftbar.css">
+  <link rel="stylesheet" href="css/indexstyle.css">
+  <style media="screen">
+    /* temporarily placing stylesheet here, as firefox cookie issue not solved yet */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      font-family: TW Cen MT;
+      position: flex;
+    }
+
+    /* genereal area on the right */
+    .gen-area {
+      width: 100vw;
+      height: max(auto, 100vh);
+      margin-top: 20vh;
+      background-color: #E0E0E0;
+      font-size: 18px;
+      font-family: Verdana;
+      padding: 8vw 8vw 8vw;;
+      color: black;
+      float: left;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    .gen-header{
+      float: left;
+      position: flex;
+      width: 84vw;
+    }
+
+    .gen-header h1{
+      color: black;
+      font-size: 6vw;
+      font-weight: bold;
+      float: left;
+      width: 84vw;
+    }
+
+    .gen-header h2{
+      color: grey;
+      font-size: 4vw;
+      font-weight: bold;
+      font-style: italic;
+      float: left;
+      width: 80vw;
+    }
+
+    .gen-top-container{
+      position: flex;
+      flex-direction: column;
+      width: 100vw;
+      heigth: auto;
+    }
+
+    .gen-img{
+      float: left;
+      margin-top: 4vw;
+    }
+
+    .gen-img img{
+      height: 60vw;
+      width: auto;
+    }
+
+    .gen-right-container{
+      margin: 4vw 0 0;
+      position: flex;
+      flex-direction: column;
+    }
+
+    .gen-right-item{
+      margin: 2vw 0 0;
+      position: flex;
+      float: left;
+      flex-direction: row;
+    }
+
+    .gen-right-item-head{
+      float: left;
+      font-weight: bold;
+      font-size: 3.5vw;
+      width: 30vw;
+    }
+
+    .gen-right-item-tail{
+      float: left;
+      font-size: 3.5vw;
+      width: 48vw;
+    }
+
+    .gen-bottom-container{
+      margin: 4vw 0 0;
+      position: flex;
+      flex-direction: column;
+      width: 84vw;
+    }
+
+    .gen-bottom-item{
+      margin: 2vw 0 0;
+      position: flex;
+      flex-direction: column;
+      float: left;
+      width: 84vw;
+    }
+
+    .gen-bottom-item-head{
+      float: left;
+      font-weight: bold;
+      font-size: 4vw;
+      width: 84vw;
+      margin-top: 2vw;
+    }
+
+    .gen-bottom-item-tail{
+      float: left;
+      font-size: 4vw;
+      width: 85vw;
+      padding-left: 4vw;
+      margin-top: 2vw;
+      position: flex;
+      flex-direction: row;
+    }
+
+    .gen-bottom-item-tail-left{
+      width: 55vw;
+      float: left;
+    }
+
+    .gen-bottom-item-tail-right{
+      width: 25vw;
+      padding-left: 2vw;
+      float: left;
+    }
+
+    @media only screen and (orientation: landscape) {
+      .gen-area{
+        width: 67.5vw;
+        height: max(auto, 100vh);
+        margin-top: 0;
+        margin-left: 32.5vw;
+        padding-top: 3vw;
+        padding-left: 5vw;
+        padding-right: 3vw;
+      }
+
+      .gen-header{
+        margin-top: 0;
+        padding-top: 0;
+        width: 58vw;
+      }
+
+      .gen-header h1{
+        font-size: 3vw;
+        width: 58vw;
+      }
+
+      .gen-header h2{
+        font-size: 1.7vw;
+        width: 58vw;
+      }
+
+      .gen-top-container{
+        flex-direction: row;
+        width: 58vw;
+      }
+
+      .gen-img{
+        margin-top: 1.5vw;
+        float: left;
+      }
+
+      .gen-img img{
+        width: 16vw;
+        height: auto;
+      }
+
+      .gen-right-container{
+        margin-top: 2vw;
+        margin-left: 3vw;
+        position: flex;
+        flex-direction: column;
+        width: 38vw;
+        float: left;
+      }
+
+      .gen-right-item{
+        margin-top: 0.3vw;
+        position: flex;
+        float: left;
+        flex-direction: row;
+        width: 35vw;
+      }
+
+      .gen-right-item-head{
+        float: left;
+        font-weight: bold;
+        font-size: 1.2vw;
+        width: 10vw;
+      }
+
+      .gen-right-item-tail{
+        float: left;
+        font-size: 1.2vw;
+        width: 22vw;
+        margin-left: 2vw;
+      }
+
+      .gen-bottom-container{
+        margin: 0 0 0;
+        position: flex;
+        flex-direction: column;
+        width: 55vw;
+      }
+
+      .gen-bottom-item{
+        margin: 1vw 0 0;
+        position: flex;
+        flex-direction: column;
+        float: left;
+        width: 55vw;
+      }
+
+      .gen-bottom-item-head{
+        float: left;
+        font-weight: bold;
+        font-size: 1.3vw;
+        width: 55vw;
+        margin-top: 0.5vw;
+      }
+
+      .gen-bottom-item-tail{
+        float: left;
+        font-size: 1.3vw;
+        width: 55vw;
+        padding-left: 3vw;
+        margin-top: 0.8vw;
+        position: block flex;
+        flex-direction: row;
+      }
+
+      .gen-bottom-item-tail-left{
+        width: 34vw;
+        max-width: 34vw;
+        display: inline-block;
+        float: left;
+        position: relative;
+      }
+
+      .gen-bottom-item-tail-right{
+        width: 18vw;
+        max-width: 18vw;
+        display: inline-block;
+        padding-left: 3vw;
+        float: left;
+        position: relative;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="leftbar">
+  <b>
+    <div class="leftbar-top">
+      <a href="index.html">
+        <lt>MICHAEL YEUNG</lt>
+      </a>
+      <hr width=75% align=left size=2vw color=#F96F00>
+    </div>
+
+    <div class="leftbar-item">
+      <a href="index.html"><oc>
+        ABOUT</oc><font color=#F96F00><</font></a>
+    </div>
+
+    <div class="leftbar-item">
+      <a href="portfolio.html"><oc>
+        DESIGNS<br>
+      </oc></a>
+    </div>
+
+    <div class="leftbar-item">
+      <a href="courses.html"><oc>
+        COURSES
+      </oc></a>
+    </div>
+
+    <div class="leftbar-item">
+      <a href="games.html"><oc>
+        GAMES</oc></a>
+    </div>
+
+    <div class="leftbar-bottom">
+
+      <div class="leftbar-bottom-block">
+        <a href="whiteboard.html"><smalloc>
+          WHITEBOARD
+        </smalloc></a>
+      </div>
+
+      <div class="leftbar-bottom-block">
+        <a href="links.html"><smalloc>
+          LINKS
+        </smalloc></a>
+      </div>
+    </div>
+  </b>
+  </div>
+  <div class="gen-area">
+    <div class="gen-header">
+        <h1>HI I'M
+        <font color=#F96F00>MICHAEL YEUNG</font></h1>
+        <h2>Penultimate Undergradute at HKUST<h2>
+    </div>
+    <div class="gen-top-container">
+      <div class="gen-img">
+        <img src="image/propic.jpg">
+      </div>
+      <div class="gen-right-container">
+        <div class="gen-right-item" style="margin-top:0;">
+          <div class="gen-right-item-head">
+            Formal Name:
+          </div>
+          <div class="gen-right-item-tail">
+            YEUNG, Man Yin Michael (楊文彥)
+          </div>
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            Nationality:
+          </div>
+          <div class="gen-right-item-tail">
+            Hong Kong
+          </div>
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            Education:
+          </div>
+          <div class="gen-right-item-tail">
+            Candidate for BSc, HKUST
+          </div>
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            . Major:
+          </div>
+          <div class="gen-right-item-tail">
+            Mathematics and Economics
+          </div>
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            . Minors:
+          </div>
+          <div class="gen-right-item-tail">
+            Big Data Technology & Actuarial Mathematics
+          </div>
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            Year / Age:
+          </div>
+          <div class="gen-right-item-tail">
+            UG Year-3 / 20
+          </div>
+        </div>
+        <div class="gen-right-item">
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            Email Address:
+          </div>
+          <div class="gen-right-item-tail">
+            michaelyeung828@gmail.com
+          </div>
+        </div>
+        <div class="gen-right-item">
+          <div class="gen-right-item-head">
+            Instagram:
+          </div>
+          <div class="gen-right-item-tail">
+            michaelyeung<b>_</b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gen-bottom-container">
+      <div class="gen-bottom-item">
+        <div class="gen-bottom-item-head">
+          CERTIFICATIONS:
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            IELTS Academic 8.0
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Jan 2020
+          </div>
+        </div>
+      </div>
+      <div class="gen-bottom-item">
+        <div class="gen-bottom-item-head">
+          EXPERIENCE:
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            MAEC Peer Mentor
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Aug 2020 - Present
+          </div>
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            The Secretary of the Executive Committee, <a href="https://games.su.ust.hk/19-20exco.html" target="_blank"><font color="blue"><u>Games Society HKUSTSU</u></font></a>
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Mar 2019 - Jun 2020
+          </div>
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            STEAM Tutor, HKUST GCE
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Jun 2019 - Aug 2019
+          </div>
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            Student Helper (STEM Expert), The Schools Challenge Hong Kong 2019, JAHK
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Jan 2019 - May 2019
+          </div>
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            Residential Life Ambassador, HKUST Hall II
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Feb 2019 - Apr 2019
+          </div>
+        </div>
+        <div class="gen-bottom-item-tail">
+          <div class="gen-bottom-item-tail-left">
+            Software Team Member, 10th HKUST Robot Design Contest, HKUST Robotics Team
+          </div>
+          <div class="gen-bottom-item-tail-right">
+            Sep 2018 - Nov 2018
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
