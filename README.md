@@ -10,4 +10,4 @@ Supervised and Unsupervised Learning, using Bayes, !D3, C4.5, K-means Clustering
 Data Visualization Group Project (mainly in JavaScript and Python). It includes 4 dynamic designs (html, CSS, JavaScript) and 3 static designs (Python: using matplotlib and numpy).
 
 ## My Website
-Non-course-related work done by myself. My personal webpage online. It includes my personal info, courses, designs, and some JavaScript games I wrote. It can be found on: mymyeung.student.ust.hk
+Non-course-related work done by myself. My personal webpage online. It includes my personal info, courses, designs, and some JavaScript games I wrote. It can be found on: https://mymyeung.student.ust.hk/
