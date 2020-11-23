@@ -1,6 +1,6 @@
 # undergrad
 
-This repo includes some files related to Michael Yeung's undergraduate study (MAEC,BDT,ACTM). All codes, unless otherwise stated or referenced, are written by Michael Yeung.
+This repo includes some files related to Michael Yeung's undergraduate study (MAEC,BDT,ACTM). All codes, unless otherwise stated or referenced, are written by Michael Yeung (or are codes for Michael Yeung's group in projects).
 
 # Folders
 ## COMP 4331 Data Mining
